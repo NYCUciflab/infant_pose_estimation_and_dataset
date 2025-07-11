@@ -35,7 +35,7 @@ Visualization of the standardized length S and the PCK@0.1 evaluation region:
 
 - **mKS**
 
-$mKS=\frac{1}{C}\sum_{i}^{C}exp\left(-\frac{d_i^2}{2S^2\lambda}\right)$
+$$mKS=\frac{1}{C}\sum_{i}^{C}exp\left(-\frac{d_i^2}{2S^2\lambda}\right)$$
 
 Here, standardized length is used, and λ is a smoothing parameter. Unlike the original [OKS](https://cocodataset.org/#keypoints-eval), which uses temporal variability, we fixed λ based on clinical expert consultation and empirical determination. This ensures consistent, scale-invariant evaluation across infants, reflecting appropriate tolerance for body proportions and annotation uncertainty.
 
