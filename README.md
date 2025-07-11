@@ -23,9 +23,9 @@ There are a few reference data entries in [sample_data](sample_data). If you wou
 
 - **PCKsh**
 
-$S=\sqrt{\left(d_{shoulder}\times d_{head-hip}\right)}$
+$$S=\sqrt{\left(d_{shoulder}\times d_{head-hip}\right)}$$
 
-$PCKsh@\beta=\frac{1}{C}\sum_{c=1}^{C}1\left(\sqrt{\left(x_c-{\hat{x}}_c\right)^2+\left(y_c-{\hat{y}}_c\right)^2}<\beta\cdot S\right)$
+$$PCKsh@\beta=\frac{1}{C}\sum_{c=1}^{C}1\left(\sqrt{\left(x_c-{\hat{x}}_c\right)^2+\left(y_c-{\hat{y}}_c\right)^2}<\beta\cdot S\right)$$
 
 C is the total number of keypoints, ${(x}_c,\ y_c)$ and ${(\hat{x}}_c,\ {\hat{y}}_c)$ are the ground truth and predicted keypoint coordinates, respectively, and $\beta$ is the predefined threshold factor.
 
@@ -45,7 +45,7 @@ We achieved high keypoint accuracy with Simple Baseline and ResUNet models (PCKs
 
 **Game-Changing Loss Function**: Our Keypoint Cross Entropy (KCE) loss combined with Weighted Average (WA) decoding consistently outperformed traditional methods, giving us super stable and precise keypoint localization. 🎯
 
-$L_{KCE}=-\frac{1}{C}\sum_{c=1}^{C}{h_clog\ {\hat{h}\prime}_c}\ ,\ \ where\ {\hat{h}\prime}_c=softmax\left({\hat{h}}_c\right)$
+$$L_{KCE}=-\frac{1}{C}\sum_{c=1}^{C}{h_clog\ {\hat{h}\prime}_c}\ ,\ \ where\ {\hat{h}\prime}_c=softmax\left({\hat{h}}_c\right)$$
 
 Here, the ground-truth heatmap $h_c$ for keypoint c is used, and a spatial softmax is applied to the predicted heatmap ${\hat{h}\prime}_c$ to create a probability distribution. This normalization centers the confidence at the predicted keypoint, with pixel values summing to one. Unlike BCE, KCE offers a more structured supervisory signal, improving spatial precision and reducing background penalization by encouraging the model to focus on relative spatial confidence.
 
