@@ -47,7 +47,7 @@ We achieved high keypoint accuracy with Simple Baseline and ResUNet models (PCKs
 
 $L_{KCE}=-\frac{1}{C}\sum_{c=1}^{C}{h_clog\ {\hat{h}\prime}_c}\ ,\ \ where\ {\hat{h}\prime}_c=softmax\left({\hat{h}}_c\right)$
 
-Here, the ground-truth heatmap $h_c$ for keypoint c is used, and a spatial softmax is applied to the predicted heatmap $ {\hat{h}\prime}_c$ to create a probability distribution. This normalization centers the confidence at the predicted keypoint, with pixel values summing to one. Unlike BCE, KCE offers a more structured supervisory signal, improving spatial precision and reducing background penalization by encouraging the model to focus on relative spatial confidence.
+Here, the ground-truth heatmap $h_c$ for keypoint c is used, and a spatial softmax is applied to the predicted heatmap ${\hat{h}\prime}_c$ to create a probability distribution. This normalization centers the confidence at the predicted keypoint, with pixel values summing to one. Unlike BCE, KCE offers a more structured supervisory signal, improving spatial precision and reducing background penalization by encouraging the model to focus on relative spatial confidence.
 
 The following table details the performance gains with KCE:
 
