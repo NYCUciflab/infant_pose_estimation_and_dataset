@@ -1,4 +1,4 @@
-# 👶💡 Video-Based Infant Pose Estimation for Early Motor Assessment
+# 👶💡 Keypoint-Based Pose Estimation from Video Data in Term and Preterm Infants
 
 ![example](https://img.shields.io/badge/Python-3.x-blue.svg) ![example](https://img.shields.io/badge/Tensorflow-2.x-yellow.svg) ![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)
 
